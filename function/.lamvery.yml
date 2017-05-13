@@ -1,0 +1,13 @@
+profile: null
+region: us-east-1
+versioning: false
+default_alias: null
+clean_build: false
+configuration:
+  name: emotional-analysis-ranking
+  runtime: python3.6
+  role: arn:aws:iam::<account-number>:role/<role>
+  handler: lambda_function.lambda_handler
+  description: This is a sample lambda function.
+  timeout: 60
+  memory_size: 512
