@@ -8,6 +8,8 @@ from __future__ import division
 import boto3
 import json
 import sys
+import os
+import requests
 
 
 class Rekognition():
@@ -37,19 +39,58 @@ class Rekognition():
             return []
 
 
+class Kintone:
+    def __init__(self):
+        self.url = os.environ['KINTONE_URL']
+        self.app_id = os.environ['KINTONE_APP_ID']
+        self.api_token = os.environ['KINTONE_API_TOKEN']
+
+    def post(self, username, type, value):
+        data = self.__build_data_params(username, type, value)
+        headers = self.__build_headers()
+        resp = requests.post(self.url, json=data, headers=headers)
+        return resp
+
+    # private
+    def __build_data_params(self, username, type, value):
+        return {
+            'app': self.app_id,
+            'record': {
+                'name': {
+                    'value': username,
+                },
+                'type': {
+                    'value': type,
+                },
+                'value': {
+                    'value': value,
+                }
+            }
+        }
+
+    def __build_headers(self):
+        return {
+            'Content-Type': 'application/json',
+            'X-Cybozu-API-Token': self.api_token,
+        }
+
+
 def lambda_handler(event, context):
     # extract
     s3_bucket = event['Records'][0]['s3']['bucket']['name']
     object = event['Records'][0]['s3']['object']['key']
+    username, ext = os.path.splitext(object)
 
     # analysis
     rkg = Rekognition()
     response = rkg.request(s3_bucket, object)
+    print(json.dumps(response))
 
-    # output
-    json_data = json.dumps(response)
-    print(json_data)
-    return json_data
+    # send to kintone
+    kintone = Kintone()
+    for r in response:
+        resp = kintone.post(username, r['Type'], r['Confidence'])
+        print(resp.text)
 
 
 if __name__ == "__main__":
