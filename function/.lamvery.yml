@@ -1,0 +1,17 @@
+profile: {{ env['AWS_PROFILE'] }}
+region: us-east-1
+versioning: false
+default_alias: null
+clean_build: false
+configuration:
+  name: emotional-analysis-ranking
+  runtime: python2.7
+  role: arn:aws:iam::142544448169:role/lambda_handson_role
+  handler: lambda_function.lambda_handler
+  description: This is a sample lambda function.
+  timeout: 60
+  memory_size: 512
+  environment_variables:
+    KINTONE_URL: {{ env['KINTONE_URL'] }}
+    KINTONE_APP_ID: "{{ env['KINTONE_APP_ID'] }}"
+    KINTONE_API_TOKEN: {{ env['KINTONE_API_TOKEN'] }}
