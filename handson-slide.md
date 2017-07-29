@@ -20,6 +20,8 @@
 - Heptagon inc.
 - クラウドエンジニア
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495731505086_image.png
+
 ----------
 - 福井 烈 (Takeshi Fukui)
 - Piece of Cake, inc. (since 2015. 3 ~)
@@ -40,6 +42,7 @@
 ----------
 # 全体の構成と流れ
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_1CBAD57ACB43AB3D17B6A0A83BAD37BBCB739ADF637C37F0C7A259E06C187F0F_1495657541795_+2017-05-25+5.25.19.png
 
 
 ----------
@@ -101,26 +104,33 @@
 ## AWS Lambdaファンクション実装
 - lambdaを検索してページを開く
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495777078570_image.png
+
 
 ----------
 ## AWS Lambdaファンクション実装
 - リージョンを `バージニア北部` に設定し、 `Lambda関数の作成` を選択する。
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495777357222_image.png
+
 ----------
 ## AWS Lambdaファンクション実装
 - `Blank Function`を選択する。
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495777483165_image.png
 
 ----------
 ## AWS Lambdaファンクション実装
 - 何もせず次へ。
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495777540885_image.png
 
 ----------
 ## AWS Lambdaファンクション実装
 - `名前`,`説明`を入力する。`ランタイム`は`python2.7`を選択する。
 - `コードエントリタイプ`は`S3からのファイルアップロード`を選択し、URLには `https://s3.amazonaws.com/jaws-ug-okinawa-20170725/emotional-analysis-ranking.zip` を入力する。
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495778088727_image.png
 
 ----------
 ## AWS Lambdaファンクション実装
@@ -134,24 +144,32 @@
      - メモリ: 512M
      - タイムアウト: 1分
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495779174254_image.png
 
 ----------
 ## AWS Lambdaファンクション実装
 - 設定を確認し、`関数の作成`を選択する。
 
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495779881231_image.png
+
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495779900067_image.png
+
 ----------
 ## s3にバケット作成
 - s3のページを開く
+
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495780174050_image.png
 
 ----------
 ## s3にバケット作成
 - バケット名を入力。リージョンは`バージニア北部`を選択し、`作成`を選択する。
 
-
+https://d2mxuefqeaa7sj.cloudfront.net/s_8D11739D38D180335B4D08A923AA714991D4C98D5CDAF51BB04977DC2635390D_1495795864049_image.png
 
 ----------
 ## s3とAWS Lambda連携
 - 作成したLambdaの画面に移動して、`トリガー`を選択する。
+
 
 
 ----------
