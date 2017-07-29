@@ -129,7 +129,7 @@
     - KINTONE_APP_ID
     - KINTONE_API_TOKEN
 - ロールを設定する
-     - AmazonRekognitionFullAccessをアタッチしたもの
+     - AmazonRekognitionFullAccessをアタッチしたもの
 - メモリサイズとタイムアウトを設定する
      - メモリ: 512M
      - タイムアウト: 1分
