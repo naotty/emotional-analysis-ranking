@@ -7,9 +7,9 @@
 ### 第6回JAWS-UG青森 で開催されたハンズオンの再演です。
 
 こちらの資料のS3とLambda連携部分を変更したものを使用しています。
+画像はスライドの方で表示します。
 
 [emotional\-analysis\-ranking/handson\-slide\.md at master · jaws\-ug\-tohoku/emotional\-analysis\-ranking](https://github.com/jaws-ug-tohoku/emotional-analysis-ranking/blob/master/handson-slide.md)
-
 
 ----------
 
