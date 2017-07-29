@@ -125,14 +125,14 @@
 ----------
 ## AWS Lambdaファンクション実装
 - 環境変数を設定する
-   - KINTONE_URL
-   - KINTONE_APP_ID
-   - KINTONE_API_TOKEN
+    - KINTONE_URL
+    - KINTONE_APP_ID
+    - KINTONE_API_TOKEN
 - ロールを設定する
-   - Rekognitionサービスへのアクセス権が必要
+     - Rekognitionサービスへのアクセス権が必要
 - メモリサイズとタイムアウトを設定する
-   - メモリ: 512MB
-   - タイムアウト: 1分
+     - メモリ: 512M
+     - タイムアウト: 1分
 
 
 ----------
